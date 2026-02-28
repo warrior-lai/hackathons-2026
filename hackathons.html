@@ -58,12 +58,45 @@
 .hackathon-row.active {
   border-color: #00ff9d;
   background: linear-gradient(135deg, rgba(0,255,157,0.08) 0%, rgba(0,255,157,0.02) 100%);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+}
+.hackathon-row.active::before {
+  content: '⚡ ACTIVA';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #00ff9d;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hackathon-row {
+  position: relative;
 }
 .hackathon-row.upcoming {
   opacity: 0.7;
 }
 .hackathon-row.upcoming:hover {
   opacity: 1;
+}
+.hackathon-row.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.hackathon-row.disabled .hackathon-month {
+  background: rgba(128, 128, 128, 0.1);
+}
+.hackathon-row.disabled .month-icon {
+  filter: grayscale(100%);
+}
+.hackathon-info .tag.wip-tag {
+  background: rgba(128, 128, 128, 0.2);
+  color: #888;
 }
 
 .hackathon-month {
@@ -257,7 +290,7 @@
       </a>
       
       <!-- #2 IDENTITY -->
-      <a href="hackathons/identity.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">ABR</span>
           <span class="month-icon">🔐</span>
@@ -266,7 +299,7 @@
           <h3>#2 IDENTITY</h3>
           <p class="focus">Nostr Identity & Social</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐ Beginner</span>
             <span class="tag">Nostr</span>
           </div>
@@ -274,12 +307,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #3 ZAPS -->
-      <a href="hackathons/zaps.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">MAY</span>
           <span class="month-icon">💜</span>
@@ -288,7 +320,7 @@
           <h3>#3 ZAPS</h3>
           <p class="focus">Lightning + Nostr Integration</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐ Intermediate</span>
             <span class="tag">Lightning + Nostr</span>
           </div>
@@ -296,12 +328,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #4 COMMERCE -->
-      <a href="hackathons/commerce.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">JUN</span>
           <span class="month-icon">🛒</span>
@@ -310,7 +341,7 @@
           <h3>#4 COMMERCE</h3>
           <p class="focus">Lightning Stores & Checkout</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐ Intermediate</span>
             <span class="tag">E-commerce</span>
           </div>
@@ -318,12 +349,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #5 MEDIA -->
-      <a href="hackathons/media.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">JUL</span>
           <span class="month-icon">📸</span>
@@ -332,7 +362,7 @@
           <h3>#5 MEDIA</h3>
           <p class="focus">Decentralized Storage</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐⭐ Advanced</span>
             <span class="tag">Blossom + CDN</span>
           </div>
@@ -340,12 +370,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #6 AI AGENTS -->
-      <a href="hackathons/ai-agents.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">AGO</span>
           <span class="month-icon">🤖</span>
@@ -354,7 +383,7 @@
           <h3>#6 AI AGENTS</h3>
           <p class="focus">Bots & Automation</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐⭐ Advanced</span>
             <span class="tag">AI + Bitcoin</span>
           </div>
@@ -362,12 +391,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #7 INFRASTRUCTURE -->
-      <a href="hackathons/infrastructure.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">SEP</span>
           <span class="month-icon">🏗️</span>
@@ -376,7 +404,7 @@
           <h3>#7 INFRASTRUCTURE</h3>
           <p class="focus">Nodes, Routing, Liquidity</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐⭐⭐ Expert</span>
             <span class="tag">Infraestructura</span>
           </div>
@@ -384,12 +412,11 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
       <!-- #8 INTEGRATION -->
-      <a href="hackathons/integration.html" class="hackathon-row upcoming">
+      <div class="hackathon-row disabled">
         <div class="hackathon-month">
           <span class="month-name">OCT</span>
           <span class="month-icon">🌐</span>
@@ -398,7 +425,7 @@
           <h3>#8 INTEGRATION</h3>
           <p class="focus">Full-Stack Production Apps</p>
           <div class="tags">
-            <span class="tag soon-tag">Próximamente</span>
+            <span class="tag wip-tag">🚧 En construcción</span>
             <span class="tag">⭐⭐⭐⭐ Expert</span>
             <span class="tag">Proyecto Final</span>
           </div>
@@ -406,9 +433,8 @@
         <div class="hackathon-prize">
           <div class="prize-amount">1,000,000</div>
           <div class="prize-unit">sats</div>
-          <div class="prize-cta">Ver detalles →</div>
         </div>
-      </a>
+      </div>
       
     </div>
     
