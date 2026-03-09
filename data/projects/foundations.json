@@ -95,6 +95,28 @@
       "submittedAt": "2026-03-08"
     },
     {
+      "id": "hash21-shop",
+      "name": "Hash21 Shop",
+      "description": "Tienda real de joyería artesanal Bitcoin con pagos nativos Lightning Network. Plata 925 con grabados Bitcoin. Sin intermediarios, sin KYC. LNURL-pay via Lightning Address, zero dependencias, i18n ES/EN.",
+      "team": [
+        {
+          "name": "Abstract Lai",
+          "github": "warrior-lai",
+          "role": "Lead Dev"
+        },
+        {
+          "name": "Ragnar 🪓",
+          "github": "",
+          "role": "AI Dev"
+        }
+      ],
+      "repo": "https://github.com/warrior-lai/hash21-shop",
+      "demo": "https://hash21.studio/shop",
+      "tech": ["LNURL-pay", "Lightning Address", "HTML/CSS/JS", "GitHub Pages"],
+      "status": "submitted",
+      "submittedAt": "2026-03-07"
+    },
+    {
       "id": "anirayo",
       "name": "AniRayo",
       "description": "Convierte cualquier smartphone Android con NFC en una terminal de cobro (POS) con magia NWC y 1-Toque.",
