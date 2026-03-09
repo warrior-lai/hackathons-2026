@@ -610,27 +610,77 @@
     </div>
     
     <div class="projects-grid" id="projectsGrid">
-      <!-- Starter Kit Oficial -->
-      <a href="https://github.com/lacrypta/lightning-starter" target="_blank" class="project-card featured">
-        <div class="project-status">⚡ Starter Kit</div>
-        <h3 class="project-name">Lightning Starter Kit</h3>
-        <p class="project-description">Template oficial para empezar. NWC, Lightning Address, LNURL, WebLN. Cloná o forkeá para arrancar tu proyecto.</p>
-        <div class="project-tech">
-          <span>Alby SDK</span>
-          <span>NWC</span>
-          <span>LNURL</span>
-          <span>WebLN</span>
-        </div>
-        <div class="project-team">
-          <span class="team-member">🏛️ La Crypta</span>
-        </div>
-        <div class="project-links">
-          <span class="project-link">Ver en GitHub →</span>
-        </div>
-      </a>
+      <!-- Proyectos se cargan dinámicamente desde /data/projects/foundations.json -->
+      <div class="loading-projects">Cargando proyectos...</div>
+    </div>
+  </div>
+</section>
+
+<script>
+async function loadProjects() {
+  const grid = document.getElementById('projectsGrid');
+  
+  try {
+    const response = await fetch('/data/projects/foundations.json');
+    const data = await response.json();
+    
+    if (!data.projects || data.projects.length === 0) {
+      grid.innerHTML = '<p style="color: rgba(255,255,255,0.5);">No hay proyectos todavía.</p>';
+      return;
+    }
+    
+    const statusLabels = {
+      'official': '⚡ Oficial',
+      'submitted': '✅ Inscripto',
+      'building': '🔨 Construyendo',
+      'idea': '💡 Idea',
+      'finalist': '🏆 Finalista',
+      'winner': '👑 Ganador'
+    };
+    
+    const statusClasses = {
+      'official': 'featured',
+      'submitted': 'submitted',
+      'building': 'building',
+      'winner': 'winner',
+      'finalist': 'finalist'
+    };
+    
+    let html = '';
+    
+    // Ordenar: official primero, luego submitted, luego building, luego resto
+    const order = ['official', 'winner', 'finalist', 'submitted', 'building', 'idea'];
+    data.projects.sort((a, b) => order.indexOf(a.status) - order.indexOf(b.status));
+    
+    data.projects.forEach(project => {
+      const statusClass = statusClasses[project.status] || '';
+      const statusLabel = statusLabels[project.status] || project.status;
+      const repoUrl = project.repo || '#';
+      const demoUrl = project.demo || '';
       
-      
-      <!-- Placeholder para más proyectos -->
+      html += `
+        <a href="${repoUrl}" target="_blank" class="project-card ${statusClass}">
+          <div class="project-status">${statusLabel}</div>
+          <h3 class="project-name">${project.name}</h3>
+          <p class="project-description">${project.description}</p>
+          ${project.tech && project.tech.length > 0 ? `
+            <div class="project-tech">
+              ${project.tech.slice(0, 4).map(t => `<span>${t}</span>`).join('')}
+            </div>
+          ` : ''}
+          <div class="project-team">
+            ${project.team.map(m => `<span class="team-member">👤 ${m.name}</span>`).join('')}
+          </div>
+          <div class="project-links">
+            <span class="project-link">Ver en GitHub →</span>
+            ${demoUrl ? `<span class="project-link demo-link" onclick="event.preventDefault(); window.open('${demoUrl}', '_blank')">🌐 Demo</span>` : ''}
+          </div>
+        </a>
+      `;
+    });
+    
+    // Agregar placeholder al final
+    html += `
       <div class="project-card placeholder">
         <div class="placeholder-icon">➕</div>
         <h3 class="project-name">Tu proyecto acá</h3>
@@ -639,9 +689,19 @@
           Agregar proyecto
         </a>
       </div>
-    </div>
-  </div>
-</section>
+    `;
+    
+    grid.innerHTML = html;
+    
+  } catch (error) {
+    console.error('Error loading projects:', error);
+    grid.innerHTML = '<p style="color: rgba(255,255,255,0.5);">Error cargando proyectos. <a href="/data/projects/foundations.json" target="_blank">Ver JSON</a></p>';
+  }
+}
+
+// Cargar proyectos cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', loadProjects);
+</script>
 
 <!-- Premios -->
 <section class="cta-section">

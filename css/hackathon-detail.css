@@ -281,3 +281,35 @@
   margin-top: 6px;
   opacity: 0.7;
 }
+
+/* Project status styles */
+.project-card.submitted {
+  border-color: rgba(0, 255, 157, 0.3);
+}
+.project-card.submitted .project-status {
+  background: rgba(0, 255, 157, 0.15);
+  color: #00ff9d;
+}
+.project-card.building {
+  border-color: rgba(255, 200, 0, 0.3);
+}
+.project-card.building .project-status {
+  background: rgba(255, 200, 0, 0.15);
+  color: #ffc800;
+}
+.project-card.winner {
+  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.02) 100%);
+}
+.project-card.finalist {
+  border-color: rgba(192, 192, 192, 0.4);
+}
+.project-card .demo-link {
+  margin-left: 10px;
+  color: #00ff9d;
+}
+.loading-projects {
+  color: rgba(255,255,255,0.5);
+  padding: 40px;
+  text-align: center;
+}
