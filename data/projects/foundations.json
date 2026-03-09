@@ -16,13 +16,7 @@
       ],
       "repo": "https://github.com/lacrypta/lightning-starter",
       "demo": "https://lightning-starter.vercel.app",
-      "tech": [
-        "Alby SDK",
-        "NWC",
-        "LNURL",
-        "WebLN",
-        "Vite"
-      ],
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "official",
       "submittedAt": "2026-02-28"
     },
@@ -38,13 +32,7 @@
         }
       ],
       "repo": "https://github.com/Lo0ker-Noma/Proof-of-attendance-HDMP",
-      "tech": [
-        "Lightning Address",
-        "Alby SDK",
-        "LNURL",
-        "WebLN",
-        "Vite"
-      ],
+      "tech": ["Lightning Address", "Alby SDK", "LNURL", "WebLN", "Vite"],
       "status": "submitted",
       "submittedAt": "2026-03-04"
     },
@@ -61,15 +49,49 @@
       ],
       "repo": "https://github.com/Fierillo/sat-lotto-v2",
       "demo": "",
-      "tech": [
-        "Alby SDK",
-        "NWC",
-        "LNURL",
-        "WebLN",
-        "Vite"
-      ],
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-06"
+    },
+    {
+      "id": "bitbybit-habits",
+      "name": "BitByBit",
+      "description": "Habit tracker que recompensa completar tareas con sats reales via Lightning. MVP: Mesada 2.0 donde sponsors crean habitos con recompensa en sats y kids los completan para ganar.",
+      "team": [
+        {
+          "name": "Anix",
+          "github": "analiaacostaok",
+          "role": "Lead Dev"
+        },
+        {
+          "name": "Llopo",
+          "github": "fabricio333",
+          "role": "Dev"
+        },
+        {
+          "name": "Wander",
+          "github": "Pizza-Wder",
+          "role": "Dev"
+        },
+        {
+          "name": "Leon",
+          "github": "leonacostaok",
+          "role": "PM"
+        }
+      ],
+      "repo": "https://github.com/bitbybit-ar/bitbybit-habits",
+      "demo": "https://bitbybit.com.ar",
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "NWC",
+        "Alby SDK",
+        "Neon DB",
+        "SCSS"
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-07"
     },
     {
       "id": "Streamsats",
@@ -84,13 +106,7 @@
       ],
       "repo": "https://github.com/FedericoLuque/Streamsats",
       "demo": "",
-      "tech": [
-        "Alby SDK",
-        "NWC",
-        "LNURL",
-        "WebLN",
-        "Vite"
-      ],
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
     },
@@ -129,17 +145,11 @@
       ],
       "repo": "https://github.com/CapScabio/Anirayo",
       "demo": "",
-      "tech": [
-        "Web NFC",
-        "Alby SDK",
-        "NWC",
-        "Vite"
-      ],
+      "tech": ["Web NFC", "Alby SDK", "NWC", "Vite"],
       "status": "submitted",
       "submittedAt": "2026-03-08"
-    }
-  ],
-   {
+    },
+    {
       "id": "digital-card",
       "name": "Digital card",
       "description": "Tu tarjeta de presentación Bitcoin",
@@ -155,22 +165,12 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
-    },
+    }
+  ],
   "_instructions": {
     "howToAdd": "Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
-    "requiredFields": [
-      "id",
-      "name",
-      "description",
-      "team",
-      "status"
-    ],
-    "optionalFields": [
-      "repo",
-      "demo",
-      "tech",
-      "submittedAt"
-    ],
+    "requiredFields": ["id", "name", "description", "team", "status"],
+    "optionalFields": ["repo", "demo", "tech", "submittedAt"],
     "statusOptions": [
       "idea",
       "building",
@@ -179,12 +179,6 @@
       "winner",
       "official"
     ],
-    "teamRoles": [
-      "Lead Dev",
-      "Dev",
-      "Designer",
-      "PM",
-      "Organizers"
-    ]
+    "teamRoles": ["Lead Dev", "Dev", "Designer", "PM", "Organizers"]
   }
 }
