@@ -165,7 +165,21 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
-    }
+    },
+    {
+  "id": "wapu-cli",
+  "name": "Wapu CLI",
+  "description": "CLI OpenSource para operar WapuPay como servicio off-ramp de BTC y USDT a ARS sin KYC. Permite depósitos por Lightning address, y automatización para integraciones de POS y agentes de IA.",
+  "team": [
+{ "name": "Rocket", "github": "rocket-morgan", "role": "Agent Dev" },
+{ "name": "AndyCreed", "github": "andycreed0x", "role": "Product Manager" }
+],
+"repo": "https://github.com/wapu-app/wapu-cli",
+"demo": "",
+"tech": ["Python", "Lightning Address"],
+"status": "building",
+"submittedAt": "2026-03-10"
+}
   ],
   "_instructions": {
     "howToAdd": "Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
