@@ -290,10 +290,10 @@
         }
       ],
       "repo": "https://github.com/ViresBTC/Satsparty",
-      "demo": "",
+      "demo": "https://satsparty.vercel.app/",
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
-      "submittedAt": "2026-03-10"
+      "submittedAt": "2026-03-11"
     }
    ],
    "_instructions":{
