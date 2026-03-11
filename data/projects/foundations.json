@@ -289,7 +289,7 @@
           "role": "Vibecoder"
         }
       ],
-      "repo": "hhttps://github.com/ViresBTC/Satsparty",
+      "repo": "https://github.com/ViresBTC/Satsparty",
       "demo": "",
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
