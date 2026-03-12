@@ -277,7 +277,24 @@
          ],
          "status":"building",
          "submittedAt":"2026-03-09"
-      }
+      },
+      {
+      "id": "SatsParty",
+      "name": "SatsParty",
+      "description": "La solucion para hacer onboarding y proveer wallets a los invitados de tu evento",
+      "team": [
+        {
+          "name": "Cyberpunk",
+          "github": "ViresBTC",
+          "role": "Vibecoder"
+        }
+      ],
+      "repo": "https://github.com/ViresBTC/Satsparty",
+      "demo": "https://satsparty.vercel.app/",
+      "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
+      "status": "building",
+      "submittedAt": "2026-03-11"
+    }
    ],
    "_instructions":{
       "howToAdd":"Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
