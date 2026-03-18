@@ -339,11 +339,12 @@
         },
         {
           "name": "Langostero",
+          "github": "fchurca",
           "role": "Dev"
         }
       ],
-      "repo": "pending",
-      "demo": "pending",
+      "repo": "",
+      "demo": "",
       "tech": [
         "Alby SDK",
         "NWC",
