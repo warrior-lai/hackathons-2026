@@ -110,7 +110,8 @@
           "role": "AI Dev"
         }
       ],
-      "repo": "https://github.com/warrior-lai/hash21-shop",
+      "repo": "https://github.com/warrior-lai/hash-21",
+      "backend": "https://github.com/warrior-lai/Hash21-Backend",
       "demo": "https://hash21.studio",
       "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "Nostr (kind 9734/9735)", "OpenTimestamps", "Vercel Serverless", "HTML/CSS/JS", "GitHub Pages"],
       "status": "submitted",
