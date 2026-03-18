@@ -380,7 +380,30 @@
          ],
          "status":"building",
          "submittedAt":"2026-03-17"
-      }
+      },{
+  "id": "sweet-shots",
+  "name": "Sweet Shots",
+  "description": "E-commerce de postres artesanales con pagos nativos Lightning Network. Login sin email via Nostr (NIP-07), catálogo con precios dual USD+sats en tiempo real, programa de fidelidad nativo en sats y descuento del 5% por pagar con Bitcoin.",
+  "team": [
+    {
+      "name": "Lalo1821",
+      "github": "Lalo1821",
+      "role": "Lead Dev"
+    }
+  ],
+  "repo": "https://github.com/Lalo1821/sweet-shots",
+  "demo": "https://sweet-shots.vercel.app",
+  "tech": [
+    "Lightning Address",
+    "Nostr NIP-07",
+    "WebLN",
+    "Alby SDK",
+    "Vite",
+    "Vanilla JS"
+  ],
+  "status": "building",
+  "submittedAt": "2026-03-18"
+}
    ],
    "_instructions":{
       "howToAdd":"Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
