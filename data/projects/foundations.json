@@ -326,6 +326,32 @@
       ],
       "status": "building",
       "submittedAt": "2026-03-17"
+    },
+    {
+      "id": "nosteach",
+      "name": "NosTeach",
+      "description": "Plataforma educativa descentralizada. MVP: Patrocinios Lightning para cursos. Alumnos pagan cursos, maestros premian alumnos, mecenas becan ambos. Todo via Lightning.",
+      "team": [
+        {
+          "name": "Fred",
+          "github": "fchurca",
+          "role": "Lead Dev"
+        },
+        {
+          "name": "Langostero",
+          "github": "fchurca",
+          "role": "Dev"
+        }
+      ],
+      "repo": "",
+      "demo": "",
+      "tech": [
+        "Alby SDK",
+        "NWC",
+        "Vite"
+      ],
+      "status": "building",
+      "submittedAt": "2026-03-17"
     }
   ],
   "_instructions": {
