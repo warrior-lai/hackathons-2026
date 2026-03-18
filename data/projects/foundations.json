@@ -96,11 +96,11 @@
     },
     {
       "id": "hash21-shop",
-      "name": "Hash21 Shop",
-      "description": "Tienda real de joyería artesanal Bitcoin con pagos nativos Lightning Network. Plata 925 con grabados Bitcoin. Sin intermediarios, sin KYC. LNURL-pay via Lightning Address, zero dependencias, i18n ES/EN.",
+      "name": "Hash21",
+      "description": "Plataforma de arte soberano con pagos Lightning nativos. Galería con zaps NIP-57 (detección automática de pagos via Nostr), tienda de joyería artesanal Bitcoin con LNURL-pay, certificación on-chain de obras (OpenTimestamps), y perfiles de artistas. Todo client-side, zero frameworks, zero backend. ES/EN.",
       "team": [
         {
-          "name": "Abstract Lai",
+          "name": "Lai⚡️",
           "github": "warrior-lai",
           "role": "Lead Dev"
         },
@@ -111,8 +111,8 @@
         }
       ],
       "repo": "https://github.com/warrior-lai/hash21-shop",
-      "demo": "https://hash21.studio/shop",
-      "tech": ["LNURL-pay", "Lightning Address", "HTML/CSS/JS", "GitHub Pages"],
+      "demo": "https://hash21.studio",
+      "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "Nostr WebSocket", "OpenTimestamps", "HTML/CSS/JS", "GitHub Pages"],
       "status": "submitted",
       "submittedAt": "2026-03-07"
     },
