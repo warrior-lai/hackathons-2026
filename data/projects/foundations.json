@@ -95,7 +95,7 @@
       "submittedAt": "2026-03-08"
     },
     {
-      "id": "hash21-shop",
+      "id": "hash21",
       "name": "Hash21",
       "description": "Plataforma de arte soberano con pagos Lightning nativos. Galería con zaps NIP-57 (firma server-side + detección automática via Nostr relays), tienda de joyería artesanal Bitcoin con LNURL-pay checkout, certificación on-chain de obras (OpenTimestamps → bloque Bitcoin), hub de artistas con perfiles y Lightning Address directa. Backend Vercel para firma NIP-57 + verificación de pagos. Frontend modular vanilla JS. Bilingüe ES/EN.",
       "team": [
@@ -113,7 +113,7 @@
       "repo": "https://github.com/warrior-lai/hash-21",
       "backend": "https://github.com/warrior-lai/Hash21-Backend",
       "demo": "https://hash21.studio",
-      "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "Nostr (kind 9734/9735)", "OpenTimestamps", "Vercel Serverless", "HTML/CSS/JS", "GitHub Pages"],
+      "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "WebLN", "Nostr (kind 9734/9735)", "OpenTimestamps", "Vercel Serverless", "HTML/CSS/JS", "GitHub Pages"],
       "status": "submitted",
       "submittedAt": "2026-03-07"
     },
