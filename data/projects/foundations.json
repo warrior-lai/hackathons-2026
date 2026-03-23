@@ -97,7 +97,7 @@
     {
       "id": "hash21",
       "name": "Hash21",
-      "description": "Plataforma de arte soberano con pagos Lightning nativos. Galería con zaps NIP-57 (firma server-side + detección automática via Nostr relays), tienda de joyería artesanal Bitcoin con LNURL-pay checkout, certificación on-chain de obras (OpenTimestamps → bloque Bitcoin), hub de artistas con perfiles y Lightning Address directa. Backend Vercel para firma NIP-57 + verificación de pagos. Frontend modular vanilla JS. Bilingüe ES/EN.",
+      "description": "Plataforma de arte soberano sobre Bitcoin. Sistema de zaps NIP-57 con firma server-side y detección automática de pagos via Nostr relays (kind 9734/9735). Tienda Lightning-native con LNURL-pay + WebLN (1-click con Alby). Certificación on-chain de obras con OpenTimestamps (SHA-256 → bloque Bitcoin, verificación pública). Hub de artistas con perfiles y Lightning Address directa — sats van directo al artista, sin intermediarios. Backend Vercel (API REST + Supabase), admin panel con auth, CMS para gestión de artistas/obras/productos. 28 tests automatizados. Frontend modular vanilla JS. Bilingüe ES/EN. En producción con artistas y obras reales.",
       "team": [
         {
           "name": "Lai⚡️",
@@ -113,7 +113,7 @@
       "repo": "https://github.com/warrior-lai/hash-21",
       "backend": "https://github.com/warrior-lai/Hash21-Backend",
       "demo": "https://hash21.studio",
-      "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "WebLN", "Nostr (kind 9734/9735)", "OpenTimestamps", "Vercel Serverless", "HTML/CSS/JS", "GitHub Pages"],
+      "tech": ["NIP-57", "LNURL-pay", "Lightning Address", "WebLN", "Nostr (kind 9734/9735)", "OpenTimestamps", "Supabase", "Vercel Serverless", "HTML/CSS/JS", "GitHub Pages"],
       "status": "submitted",
       "submittedAt": "2026-03-07"
     },
