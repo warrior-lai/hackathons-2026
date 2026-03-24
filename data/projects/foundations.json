@@ -227,7 +227,7 @@
             }
          ],
          "repo":"https://github.com/wapu-app/wapu-cli",
-         "demo":"",
+         "demo":"https://wapu.shiafu.com/",
          "tech":[
             "Python",
             "Lightning Address"
