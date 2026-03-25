@@ -138,9 +138,8 @@
       ],
       "status": "submitted",
       "submittedAt": "2026-03-08"
-    }
-  ],
-   {
+    },
+    {
       "id": "digital-card",
       "name": "Digital card",
       "description": "Tu tarjeta de presentación Bitcoin",
@@ -156,7 +155,8 @@
       "tech": ["Alby SDK", "NWC", "LNURL", "WebLN", "Vite"],
       "status": "building",
       "submittedAt": "2026-03-08"
-    },
+    }
+  ],
   "_instructions": {
     "howToAdd": "Para agregar tu proyecto, hacé un PR a este archivo agregando tu proyecto al array 'projects'.",
     "requiredFields": [
