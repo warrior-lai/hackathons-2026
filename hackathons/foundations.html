@@ -797,30 +797,39 @@ async function loadProjects() {
     const order = ['official', 'winner', 'finalist', 'submitted', 'building', 'idea'];
     data.projects.sort((a, b) => order.indexOf(a.status) - order.indexOf(b.status));
     
-    // Final scores by repo slug
+    // Final scores by repo slug (multiple case variants for safety)
     const finalScores = {
-      'proof-of-attendance-hdmp': 7.49, 'stacktris': 7.49, 'hash21-shop': 7.07,
+      'Proof-of-attendance-HDMP': 7.49, 'proof-of-attendance-hdmp': 7.49,
+      'stacktris': 7.49, 'hash21-shop': 7.07,
       '1-sat-to': 7.00, 'bitbybit-habits': 6.98, 'digital-card': 6.83,
       'sweet-shots': 6.58, 'sat-lotto-v2': 6.37, 'wapu-cli': 6.28,
-      'Streamsats': 6.17, 'relam-pago': 5.92, 'anirayo': 5.85,
-      'SatsParty': 5.42, 'nosteach': 5.00, 'life-action-plan': 4.83
+      'streamsats.github.io': 6.17, 'Streamsats': 6.17,
+      'relam-pago': 5.92, 'RelamPago': 5.92, 'Anirayo': 5.85, 'anirayo': 5.85,
+      'Satsparty': 5.42, 'SatsParty': 5.42,
+      'nosteach': 5.00, 'life-action-plan': 4.83
     };
 
-    // Map project repo slugs to report slugs
+    // Map project repo slugs to report slugs (case-sensitive from GitHub URLs)
     const reportSlugMap = {
+      'Proof-of-attendance-HDMP': 'proof-of-attendance',
       'proof-of-attendance-hdmp': 'proof-of-attendance',
       'sat-lotto-v2': 'satlotto-v2',
       'bitbybit-habits': 'bitbybit',
+      'streamsats.github.io': 'streamsats',
       'Streamsats': 'streamsats',
       'hash21-shop': 'hash21-shop',
+      'Anirayo': 'anirayo',
       'anirayo': 'anirayo',
       'digital-card': 'digital-card',
       'wapu-cli': 'wapu-cli',
       'relam-pago': 'relampago',
+      'RelamPago': 'relampago',
       'stacktris': 'stacktris',
+      'Satsparty': 'satsparty',
       'SatsParty': 'satsparty',
       '1-sat-to': '1-sat-to',
-      'openwork': 'openwork',
+      'agentic-economy': null,
+      'openwork': null,
       'life-action-plan': 'life-action-plan',
       'nosteach': 'nosteach',
       'sweet-shots': 'sweet-shots',
