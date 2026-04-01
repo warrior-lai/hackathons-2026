@@ -12,17 +12,22 @@
   #projectsGrid { display: block; }
   .projects-list { display: flex; flex-direction: column; gap: 8px; width: 100%; }
   .project-list-item {
-    display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px;
+    display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 16px;
     padding: 16px 24px; border-radius: 10px; width: 100%;
     background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
     transition: all 0.2s;
   }
   .project-list-item:hover { background: rgba(255,200,0,0.04); border-color: rgba(255,200,0,0.2); }
-  .project-list-status { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
-  .project-list-info { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+  .project-list-info { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .project-list-header { display: flex; align-items: baseline; gap: 12px; }
   .project-list-name { font-weight: 600; color: #fff; text-decoration: none; font-size: 1rem; white-space: nowrap; }
   .project-list-name:hover { color: #ffc800; }
-  .project-list-team { font-size: 0.85rem; color: rgba(255,255,255,0.35); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .project-list-team { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .project-list-desc { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .project-list-score { font-family: monospace; font-weight: 700; font-size: 1rem; padding: 4px 12px; border-radius: 6px; flex-shrink: 0; }
+  .project-list-score.sc-green { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+  .project-list-score.sc-yellow { background: rgba(234,179,8,0.15); color: #eab308; border: 1px solid rgba(234,179,8,0.3); }
+  .project-list-score.sc-red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
   .project-list-links { display: flex; gap: 16px; flex-shrink: 0; }
   .project-list-link { font-size: 0.8rem; color: #ffc800; text-decoration: none; opacity: 0.7; }
   .project-list-link:hover { opacity: 1; }
@@ -792,6 +797,15 @@ async function loadProjects() {
     const order = ['official', 'winner', 'finalist', 'submitted', 'building', 'idea'];
     data.projects.sort((a, b) => order.indexOf(a.status) - order.indexOf(b.status));
     
+    // Final scores by repo slug
+    const finalScores = {
+      'proof-of-attendance-hdmp': 7.49, 'stacktris': 7.49, 'hash21-shop': 7.07,
+      '1-sat-to': 7.00, 'bitbybit-habits': 6.98, 'digital-card': 6.83,
+      'sweet-shots': 6.58, 'sat-lotto-v2': 6.37, 'wapu-cli': 6.28,
+      'Streamsats': 6.17, 'relam-pago': 5.92, 'anirayo': 5.85,
+      'SatsParty': 5.42, 'nosteach': 5.00, 'life-action-plan': 4.83
+    };
+
     // Map project repo slugs to report slugs
     const reportSlugMap = {
       'proof-of-attendance-hdmp': 'proof-of-attendance',
@@ -822,16 +836,23 @@ async function loadProjects() {
       const repoSlug = repoUrl.split('/').pop() || '';
       const reportSlug = reportSlugMap[repoSlug];
       const reportUrl = reportSlug ? `foundations/reports.html?report=${reportSlug}` : null;
+      const score = finalScores[repoSlug];
+      const scoreClass = score >= 7 ? 'sc-green' : score >= 5.5 ? 'sc-yellow' : 'sc-red';
+      const desc = project.description || '';
       
       html += `
         <div class="project-list-item">
           <div class="project-list-info">
-            ${reportUrl 
-              ? `<a href="${reportUrl}" class="project-list-name">${project.name}</a>`
-              : `<span class="project-list-name" style="color:rgba(255,255,255,0.5)">${project.name}</span>`
-            }
-            <span class="project-list-team">${teamNames}</span>
+            <div class="project-list-header">
+              ${reportUrl 
+                ? `<a href="${reportUrl}" class="project-list-name">${project.name}</a>`
+                : `<span class="project-list-name" style="color:rgba(255,255,255,0.5)">${project.name}</span>`
+              }
+              <span class="project-list-team">${teamNames}</span>
+            </div>
+            ${desc ? `<div class="project-list-desc">${desc}</div>` : ''}
           </div>
+          ${score ? `<span class="project-list-score ${scoreClass}">${score.toFixed(2)}</span>` : ''}
           <div class="project-list-links">
             ${reportUrl ? `<a href="${reportUrl}" class="project-list-link">📊 Reporte</a>` : ''}
             <a href="${repoUrl}" target="_blank" class="project-list-link">GitHub</a>
