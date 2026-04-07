@@ -27,3 +27,23 @@ projects:
       - Vite
     status: official
     submittedAt: "2026-04-01"
+
+
+  - id: scammer-come-empanadas-detector
+    name: "Scammer & Come Empanadas Detector"
+    description: "Nostr Identity Hub con verificacion NIP-05, badges de reputacion y deteccion de scammers/come empanadas para la comunidad de La Crypta."
+    team:
+      - name: Looker
+        github: Lo0ker-Noma
+        role: Lead Dev
+    repo: https://github.com/Lo0ker-Noma/nostr-identity-hub
+    demo: "https://nostr-identity-hub.vercel.app/"
+    tech:
+      - Nostr
+      - NIP-05
+      - NIP-58
+      - NIP-57
+      - Vite
+      - Vercel
+    status: building
+    submittedAt: "2026-04-07"
