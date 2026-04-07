@@ -339,6 +339,7 @@
   }
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 <body>
 
@@ -759,7 +760,7 @@ function renderHero(hackathon, totalSats) {
 
   // PR link
   const prLink = document.getElementById('projectsPrLink');
-  if (prLink) prLink.href = `https://github.com/lacrypta/hackathons-2026/blob/main/data/projects/${HACKATHON_ID}.json`;
+  if (prLink) prLink.href = `https://github.com/lacrypta/hackathons-2026/blob/main/data/projects/${HACKATHON_ID}.yaml`;
 }
 
 // ─────────────────────────────────────────────
@@ -769,9 +770,10 @@ async function loadProjects() {
   const grid = document.getElementById('projectsGrid');
   
   try {
-    const response = await fetch(`/data/projects/${HACKATHON_ID}.json?v=` + Date.now());
+    const response = await fetch(`/data/projects/${HACKATHON_ID}.yaml?v=` + Date.now());
     if (!response.ok) throw new Error('No encontrado');
-    const data = await response.json();
+    const yamlText = await response.text();
+    const data = jsyaml.load(yamlText);
     
     if (!data.projects || data.projects.length === 0) {
       grid.innerHTML = buildPlaceholderCard();
@@ -841,7 +843,7 @@ function buildPlaceholderCard() {
       <div class="placeholder-icon">➕</div>
       <h3 class="project-name">Tu proyecto acá</h3>
       <p class="project-description">Agregá tu proyecto haciendo un PR al repositorio.</p>
-      <a href="https://github.com/lacrypta/hackathons-2026/edit/main/data/projects/${HACKATHON_ID}.json" target="_blank" class="btn btn-outline btn-small">
+      <a href="https://github.com/lacrypta/hackathons-2026/edit/main/data/projects/${HACKATHON_ID}.yaml" target="_blank" class="btn btn-outline btn-small">
         Agregar proyecto
       </a>
     </div>
