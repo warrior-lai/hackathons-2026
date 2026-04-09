@@ -27,3 +27,24 @@ projects:
       - Vite
     status: official
     submittedAt: "2026-04-01"
+  - id: nostr-en-el-espacio
+    name: Nostr en el Espacio
+    description: "Explorá Nostr como si fuera un universo vivo: cargás una npub o nprofile y Nostr en el Espacio descubre follows, conexiones y comunidades para convertirlas en un grafo interactivo que te deja ver, entender y navegar las relaciones entre usuarios."
+    team:
+      - name: Naranja
+        github: soyezequiel
+        role: Lead Dev
+    repo: https://github.com/soyezequiel/nostr-en-el-espacio
+    demo: ""
+    tech:
+      - Next.js
+      - React 19
+      - TypeScript
+      - Zustand
+      - Dexie
+      - nostr-tools
+      - NDK
+      - d3-force
+      - deck.gl
+    status: building
+    submittedAt: "2026-04-09"
