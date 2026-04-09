@@ -31,7 +31,7 @@ projects:
 
   - id: scammer-come-empanadas-detector
     name: "Scammer & Come Empanadas Detector"
-    description: "Nostr Identity Hub con verificacion NIP-05, badges de reputacion y deteccion de scammers/come empanadas para la comunidad de La Crypta."
+    description: "Nostr Identity Hub con verificación NIP-05, badges de reputación y detección de scammers/come empanadas para la comunidad de La Crypta."
     team:
       - name: Looker
         github: Lo0ker-Noma
