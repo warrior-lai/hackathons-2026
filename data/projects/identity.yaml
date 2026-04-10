@@ -67,3 +67,31 @@ projects:
       - deck.gl
     status: building
     submittedAt: "2026-04-09"
+
+  - id: obelisk
+    name: Obelisk
+    description: "Chat grupal tipo Discord donde la identidad viene de tu keypair de Nostr. Sin emails ni passwords — filtrado de spam vía Web of Trust, canales de texto y voz, roles y moderación."
+    team:
+      - name: Fabricio
+        github: Fabricio333
+        role: Lead Dev
+      - name: Topolino
+        github: topolino-claw
+        role: Dev
+    repo: https://github.com/Fabricio333/obelisk
+    demo: "https://obelisk.ar"
+    tech:
+      - Next.js
+      - TypeScript
+      - Nostr
+      - NDK
+      - NIP-07
+      - NIP-46
+      - NIP-05
+      - NIP-65
+      - Prisma
+      - PostgreSQL
+      - Socket.io
+      - Tailwind
+    status: building
+    submittedAt: "2026-04-10"
