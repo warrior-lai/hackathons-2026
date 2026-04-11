@@ -95,3 +95,36 @@ projects:
       - Tailwind
     status: building
     submittedAt: "2026-04-10"
+
+  - id: arena
+    name: Arena
+    description: "Retá a tu red y compartí tu gloria en Nostr. Competí, reclamá recompensas en vivo y forjá tu identidad con badges NIP-58. Cliente de BitByBit."
+    team:
+      - name: Anix
+        github: analiaacostaok
+        role: Lead Dev
+      - name: Wander
+        github: Pizza-Wder
+        role: UX
+    repo: https://github.com/bitbybit-ar/bitbybit-arena
+    demo: "https://arena.bitbybit.com.ar"
+    tech:
+      - NIP-01
+      - NIP-07
+      - NIP-42
+      - NIP-46
+      - NIP-57
+      - NIP-58
+      - NIP-75
+      - Next.js 16
+      - React 19
+      - TypeScript
+      - SCSS Modules
+      - next-intl
+      - Drizzle ORM
+      - Neon
+      - nostr-tools
+      - Alby SDK
+      - JWT (jose)
+    status: building
+    submittedAt: "2026-04-10"
