@@ -96,14 +96,14 @@ projects:
     status: building
     submittedAt: "2026-04-10"
 
-  - id: nostr-dlc-bulletin
-    name: Nostr Predict — P2P Bitcoin Prediction Bulletin
+  - id: predictr 
+    name: Predictr — P2P Bitcoin Prediction Bulletin
     description: "Mercado de apuestas P2P trustless y browser-native: los usuarios publican bets en Nostr, negocian via DMs cifrados (NIP-44) y liquidan on-chain con contratos Bitcoin Taproot. Sin coordinador, sin custodio, sin backend."
     team:
-      - name: landaverdend
+      - name: nic(o) 
         github: landaverdend
         role: Lead Dev
-    repo: https://github.com/landaverdend/nostr_prediction_bulletin 
+    repo: https://github.com/landaverdend/predictr
     demo: ""
     tech:
       - Bitcoin
