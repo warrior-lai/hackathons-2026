@@ -54,7 +54,7 @@ projects:
         github: soyezequiel
         role: Lead Dev
     repo: https://github.com/soyezequiel/nostr-en-el-espacio
-    demo: ""
+    demo: "https://nostr-en-el-espacio.vercel.app/"
     tech:
       - Next.js
       - React 19
