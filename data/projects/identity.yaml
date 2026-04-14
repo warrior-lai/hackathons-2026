@@ -95,3 +95,60 @@ projects:
       - Tailwind
     status: building
     submittedAt: "2026-04-10"
+
+  - id: predictr
+    name: Predictr — P2P Bitcoin Prediction Bulletin
+    description: "Mercado de apuestas P2P trustless y browser-native: los usuarios publican bets en Nostr, negocian via DMs cifrados (NIP-44) y liquidan on-chain con contratos Bitcoin Taproot. Sin coordinador, sin custodio, sin backend."
+    team:
+      - name: nic(o)
+        github: landaverdend
+        role: Lead Dev
+    repo: https://github.com/landaverdend/predictr
+    demo: ""
+    tech:
+      - Bitcoin
+      - Taproot
+      - DLC
+      - Nostr
+      - NIP-44
+      - NIP-40
+      - nostr-tools
+      - TypeScript
+      - React
+      - Vite
+      - Tailwind
+    status: building
+    submittedAt: "2026-04-11"
+
+  - id: arena
+    name: Arena
+    description: "Retá a tu red y compartí tu gloria en Nostr. Competí, reclamá recompensas en vivo y forjá tu identidad con badges NIP-58. Cliente de BitByBit."
+    team:
+      - name: Anix
+        github: analiaacostaok
+        role: Lead Dev
+      - name: Wander
+        github: Pizza-Wder
+        role: Designer
+    repo: https://github.com/bitbybit-ar/bitbybit-arena
+    demo: "https://arena.bitbybit.com.ar"
+    tech:
+      - NIP-01
+      - NIP-07
+      - NIP-42
+      - NIP-46
+      - NIP-57
+      - NIP-58
+      - NIP-75
+      - Next.js 16
+      - React 19
+      - TypeScript
+      - SCSS Modules
+      - next-intl
+      - Drizzle ORM
+      - Neon
+      - nostr-tools
+      - Alby SDK
+      - JWT (jose)
+    status: building
+    submittedAt: "2026-04-10"
