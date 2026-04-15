@@ -152,3 +152,24 @@ projects:
       - JWT (jose)
     status: building
     submittedAt: "2026-04-10"
+
+  - id: nostr-kahoot
+    name: "Nostr Kahoot"
+    description: "Kahoot descentralizado construido en Nostr. Cuestionarios interactivos en tiempo real con autenticación NIP-07, eventos firmados criptográficamente, QR para unirse y ranking en vivo."
+    team:
+      - name: Looker
+        github: Lo0ker-Noma
+        role: Lead Dev
+    repo: https://github.com/Lo0ker-Noma/nostr-kahoot
+    demo: ""
+    tech:
+      - Nostr
+      - NIP-07
+      - React 18
+      - Vite
+      - Zustand
+      - Tailwind CSS
+      - qrcode.react
+      - Vercel
+    status: building
+    submittedAt: "2026-04-15"
